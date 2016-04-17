@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Шаблон</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/tmpl.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<link rel="stylesheet" href="css/reset.css"> 
+	<link rel="stylesheet" href="css/styles.css"> 
+</head>
+<body>
+<script type="text/tmpl" id="head">
+<div class="background_grey">
+	<div class="page">
+		<div class="content">
+			<div class="header">
+				<h1><%= data[0]%></h1> 
+				<img src="<%= data[1]%>" alt="">
+				<div>
+					<p><%=data[2]%></p>
+				</div>
+			</div>
+</script>
+<script type="text/tmpl" id="qqq">
+		<div class="spisok">
+			<p>Хочу изучать Frontend потому что:</p>
+			<ul>
+				<% for ( var i = 0; i < data1.length; i++ ) { %>
+					<li><%=data1[i].item%></li>
+				<% } %>
+			</ul>
+		</div>
+</script>
+<script type="text/tmpl" id="footer">
+		<div class="info">
+			<div class="info-tel">
+				<p>Мой телефон:</p>
+				<p><%=data2[0]%></p>
+			</div>
+			<div class="info-vk">
+				<p>Мой профиль в Контакте</p>
+				<p><a href="<%=data2[1]%>"><%=data2[2]%></a></p>
+			</div>
+		</div>
+		<div class="fidbek">
+			<p>Мой фидбек:</p>
+            <p><%=data2[3]%></p>
+		</div>
+		</div>
+	</div>
+</div>
+</script>
+</body>
+</html>
